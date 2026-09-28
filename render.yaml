@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: roblox-ai-3d-studio
+    env: docker
+    dockerfilePath: Dockerfile
+    plan: standard
+    region: oregon
+    healthCheckPath: /_stcore/health
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: MAX_POLY_LIMIT
+        value: "10000"
+      - key: TEXTURE_RES
+        value: "1024"
+      - key: STREAMLIT_SERVER_HEADLESS
+        value: "true"
+      - key: STREAMLIT_SERVER_ENABLE_CORS
+        value: "false"
