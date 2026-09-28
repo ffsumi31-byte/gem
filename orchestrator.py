@@ -1,6 +1,7 @@
 import os
 import subprocess
 import shutil
+import zipfile
 from typing import Dict, Any, Optional
 from config import SystemConfig
 from qc_pipeline import RobloxQualityController
